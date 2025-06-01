@@ -125,15 +125,16 @@
       vero!
     </p>
     <script>
-      const toggle_tbn = document.getElementsByClassName("Toggle");
-      let header = document.getElementsByClassName("header");
       let clicked = true;
+
       function change() {
         if (clicked) {
-          header.style.background = "black";
+          document.body.style.background = "black";
+          document.body.style.color = "white"; // Optional: change text color
           clicked = false;
         } else {
-          header.style.background.color = "white";
+          document.body.style.background = "white";
+          document.body.style.color = "black";
           clicked = true;
         }
       }
