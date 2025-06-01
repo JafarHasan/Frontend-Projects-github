@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      background: linear-gradient(rgb(187, 179, 232), rgb(51, 17, 153));
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+      padding-bottom: 10px;
+    }
+    .left-header {
+    }
+    .left-header ul li {
+      float: left;
+      list-style-type: none;
+      padding-left: 0px;
+    }
+    .left-header ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 23px;
+      padding: 10px;
+      letter-spacing: 2px;
+    }
+    .left-header ul li a:hover {
+      transition: 0.5s all ease;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+    }
+    .middle-header {
+    }
+
+    .middle-header input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      width: 50vh;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+    .middle-header button {
+      background-color: rgb(251, 249, 249);
+      color: black;
+    }
+    .search-btn {
+    }
+    button {
+      padding: 10px 12px;
+      background-color: rgba(239, 31, 83, 0.5);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 17px;
+      margin: 5px;
+      transition: 0.5s all ease-in-out;
+    }
+
+    .right-header button {
+      background: white;
+      color: black;
+    }
+    button:hover {
+      border: 1px solid rgb(20, 14, 14);
+      transition: 0.5s all ease-in-out;
+      box-shadow: 2px 2px 5px black;
+      background-color: transparent;
+    }
+    p {
+      font-size: 65px;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="left-header">
+        <list>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li>
+              <a href="#">Course</a>
+            </li>
+            <li><a href="#">Amount</a></li>
+            <li><a href="#">College</a></li>
+          </ul>
+        </list>
+      </div>
+      <div class="middle-header">
+        <input type="text" class="search" placeholder="Search..." />
+        <button class="search-btn">Search</button>
+      </div>
+      <div class="right-header">
+        <button class="login">Login</button>
+        <button class="Toggle" onclick="change()">Toggle</button>
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dolore
+      nostrum velit repellat eligendi fuga debitis, voluptas ipsam, ipsum harum
+      eum earum. Sit beatae perspiciatis dicta maxime ad quis pariatur!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste cupiditate
+      autem pariatur facilis sit quos repellat tempora maiores aspernatur, id,
+      illo ipsa obcaecati atque, commodi dolor! Assumenda omnis consectetur
+      vero!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste cupiditate
+      autem pariatur facilis sit quos repellat tempora maiores aspernatur, id,
+      illo ipsa obcaecati atque, commodi dolor! Assumenda omnis consectetur
+      vero!
+    </p>
+    <script>
+      const toggle_tbn = document.getElementsByClassName("Toggle");
+      let header = document.getElementsByClassName("header");
+      let clicked = true;
+      function change() {
+        if (clicked) {
+          header.style.background = "black";
+          clicked = false;
+        } else {
+          header.style.background.color = "white";
+          clicked = true;
+        }
+      }
+    </script>
+  </body>
+</html>
