@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        /* max-width: 50%; */
+        /* background: green; */
+        padding: 20px;
+      }
+      .letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 100px;
+        overflow: hidden;
+        /* visibility: hidden; */
+        animation: typing 2s infinite ease-in-out;
+      }
+      .letter-1 {
+        animation-delay: 0s;
+        color: red;
+      }
+      .letter-2 {
+        animation-delay: 0.2s;
+        color: blue;
+      }
+      .letter-3 {
+        animation-delay: 0.4s;
+        color: yellow;
+      }
+      .letter-4 {
+        animation-delay: 0.6s;
+        color: black;
+      }
+      .letter-5 {
+        animation-delay: 0.8s;
+        color: green;
+      }
+      .letter-6 {
+        animation-delay: 1s;
+        color: red;
+      }
+      .letter-7 {
+        animation-delay: 1.2s;
+        color: blue;
+      }
+
+      @keyframes typing {
+        0%,
+        80%,
+        100% {
+          opacity: 0;
+        }
+        10%,
+        60% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="letter letter-1">L</div>
+      <div class="letter letter-2">O</div>
+      <div class="letter letter-3">A</div>
+      <div class="letter letter-4">D</div>
+      <div class="letter letter-5">I</div>
+      <div class="letter letter-6">N</div>
+      <div class="letter letter-7">G</div>
+    </div>
+  </body>
+</html>
