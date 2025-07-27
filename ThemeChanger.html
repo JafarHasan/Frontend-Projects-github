@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThemeChanger</title>
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+      }
+      body {
+        margin: 0;
+        padding: 50px;
+        font-family: sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background 0.4s, color 0.4s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      .box {
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        width: 300px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Theme Switcher</h1>
+    <select id="themeSelector" onchange="changeTheme(this.value)">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="sunset">Sunset</option>
+      <option value="mint">Mint</option>
+      <option value="space">Space</option>
+    </select>
+    <div class="box">
+      <h1>This is a Preview Box</h1>
+    </div>
+    <script>
+      function changeTheme(theme) {
+        const root = document.documentElement;
+        switch (theme) {
+          case "dark":
+            root.style.setProperty("--bg-color", "#121212");
+            root.style.setProperty("--text-color", "#ffffff");
+            break;
+          case "sunset":
+            root.style.setProperty("--bg-color", "#ff6e7f");
+            root.style.setProperty("--text-color", "#fff8f0");
+            break;
+          case "mint":
+            root.style.setProperty("--bg-color", "#e0f7f1");
+            root.style.setProperty("--text-color", "#005f56");
+            break;
+          case "space":
+            root.style.setProperty("--bg-color", "#0f0f30");
+            root.style.setProperty("--text-color", "#9df1ff");
+            break;
+          default: //LIGHT
+            root.style.setProperty("--bg-color", "#ffffff");
+            root.style.setProperty("--text-color", "#000000");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #6a11cb, #2565fc);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .quote-box {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 40px 30px;
+        border: 1px solid black;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+      }
+      .quote {
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 30px;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+      .author {
+        font-size: 19px;
+        font-weight: bold;
+        color: #dedb19;
+      }
+      button {
+        margin-top: 25px;
+        padding: 10px 20px;
+        background: #dedb19;
+        border: none;
+        border-radius: 9px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.5s ease;
+      }
+      button:hover {
+        background: transparent;
+        color: #dedb19;
+        border: 1px solid #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <div class="quote" id="quote">Click Button To Generate A New Quote</div>
+      <div class="author" id="author">-</div>
+      <button onclick="getQuote()">New Quote</button>
+    </div>
+    <script>
+      const quotes = [
+        {
+          text: "Believe you can and you're halfway there.",
+          author: "Theodore Roosevelt",
+        },
+        {
+          text: "The future depends on what you do today.",
+          author: "Mahatma Gandhi",
+        },
+        {
+          text: "Don't watch the clock; do what it does. Keep going.",
+          author: "Sam Levenson",
+        },
+        {
+          text: "Everything you can imagine is real.",
+          author: "Pablo Picasso",
+        },
+        {
+          text: "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+          author: "Zig Ziglar",
+        },
+        { text: "Dream big and dare to fail.", author: "Norman Vaughan" },
+      ];
+
+      function getQuote() {
+        const random = Math.floor(Math.random() * quotes.length);
+        document.getElementById(
+          "quote"
+        ).textContent = `" - ${quotes[random].text}"`;
+
+        document.getElementById(
+          "author"
+        ).textContent = `${quotes[random].author}`;
+      }
+    </script>
+  </body>
+</html>
